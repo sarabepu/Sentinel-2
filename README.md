@@ -109,9 +109,9 @@ Importe la funcion RGB de [aca](https://github.com/GeoscienceAustralia/dea-noteb
 )
 
 Y se pueden mejorar la definición en algunos casos asi:
-<img src="https://i.imgur.com/r01CaZ8.png" width="450" height="250" /> <img src="https://i.imgur.com/IHWQBcC.png" width="450" height="250"/>
+<img src="https://i.imgur.com/r01CaZ8.png" width="350" height="250" /> <img src="https://i.imgur.com/IHWQBcC.png" width="350" height="250"/>
 
-<img src="https://i.imgur.com/CecON8b.png" width="450" height="250" /> <img src="https://i.imgur.com/EnarvP8.png" width="450" height="250"/>
+<img src="https://i.imgur.com/CecON8b.png" width="350" height="250" /> <img src="https://i.imgur.com/EnarvP8.png" width="350" height="250"/>
 
 Tambien se pueden hacer analisis más especificos conociendo las mezclas de las bandas:
 "The false colour band combination (swir1, nir, green) emphasises growing vegetation in green, and water in deep blue:"
