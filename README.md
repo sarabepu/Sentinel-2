@@ -3,12 +3,12 @@
 En este informe me centraré en el avance hecho en el análisis de imágenes satelitales Sentinel-2 durante la segunda parte del semestre. Considero que el avance más importante es la documentación rigurosa del proceso, ya que en internet no hay muchos recursos sobre Sentinel-2 (a diferencia de LandSat).
 # Tabla de contenido
 1. [Objetivo](#s1)
-2. *Desafios*
+2. ***Desafios***
     1. [Instalación del cubo](#s2.1)
-    2. [Indexación de imágenes en el cubo:](#s2.2)
-    3. [Prueba de algoritmos sobre imágenes indexadas:](#s2.3)
+    2. [Indexación de imágenes en el cubo](#s2.2)
+    3. [Prueba de algoritmos sobre imágenes indexadas](#s2.3)
 3. [Errores y soluciones](#s3)
-4. [Proximos pasos:](#s4)
+4. [Proximos pasos](#s4)
 
 ## Objetivo: <a name="s1"></a>
 Recrear con imágenes Sentinel-2 análisis previos hechos con imágenes LandSat 8 en Tolima. 
@@ -28,7 +28,7 @@ Yo creé mi propia implementación del cubo ya que para desplegar la de Docker s
 
 Una vez se tiene el cubo y la base de datos lista se deben hacer los siguientes pasos: 
 
-- Buscar y descargar imágenes de [acá]( https://scihub.copernicus.eu/dhus/#/home). En particular yo utilicé imágenes del producto S2MSI2A pero creo que el proceso no debe variar demasiado para otros productos.
+- Buscar y descargar imágenes de [acá]( https://scihub.copernicus.eu/dhus/#/home). En particular yo utilicé imágenes del producto tipo S2MSI2A pero creo que el proceso no debe variar demasiado para otros productos.
 
 - Activar el ambiente con el comando 
 
@@ -179,4 +179,5 @@ OSError: Could not find lib geos_c.dll or load any of its variants.
 
 <img src="https://i.imgur.com/9nKAAg3.png" width="450" height="250" />
 
-## Puedes encontrar el código en el el jupyter notebook analysis y un proceso más detallado (y desorganizado) en documentacion.MD
+
+## Se puede encontrar el código en el el jupyter notebook [analysis](https://github.com/sarabepu/Sentinel-2/blob/master/analysis.ipynb) y un proceso más detallado (y desorganizado) en [documentacion.MD](https://github.com/sarabepu/Sentinel-2/blob/master/documentaci%C3%B3n.MD)
