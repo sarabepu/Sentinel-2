@@ -109,7 +109,7 @@ Importe la funcion RGB de [aca](https://github.com/GeoscienceAustralia/dea-noteb
 )
 
 Y se pueden mejorar la definición en algunos casos asi:
-<img src="https://i.imgur.com/r01CaZ8.png" width="350" height="250" /> <img src="https://i.imgur.com/IHWQBcC.png" width="350" height="250"/>
+<img src="https://i.imgur.com/r01CaZ8.png" width="250" height="250" /> <img src="https://i.imgur.com/IHWQBcC.png" width="350" height="250"/>
 
 <img src="https://i.imgur.com/CecON8b.png" width="350" height="250" /> <img src="https://i.imgur.com/EnarvP8.png" width="350" height="250"/>
 
