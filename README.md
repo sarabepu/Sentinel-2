@@ -126,6 +126,7 @@ Tambien se pueden hacer analisis más especificos conociendo las mezclas de las 
 
 
 Sin embargo, los resultados no fueron los esperados:
+
 <img src="https://i.imgur.com/KX0wNc7.png" width="450" height="250" />
 
 
