@@ -143,21 +143,23 @@ Sin embargo, los resultados no fueron los esperados:
 ```
 "source" no se reconoce como un comando interno o externo
 ```
--  `` activate cubeenv`` en vez de `` source activate cubeenv`` 
+**Solucion:** correr  `` activate cubeenv`` en vez de `` source activate cubeenv`` 
 
     
 
 ```
 OSError: Could not find lib geos_c.dll or load any of its variants. 
 ```
-**solucion:** Puede ser que el GDAL necesario para que funcione el cubo de 2.4.3 pero para el script de preparacion es GDAL>=3. Entonces desactiva el ambiente cubeenv e instala gdal con y
+**Solucion:** Puede ser que el GDAL necesario para que funcione el cubo de 2.4.3 pero para el script de preparacion es GDAL>=3. Entonces desactiva el ambiente cubeenv e instala gdal con y
     ```conda install -c conda-forge gdal```
+
+    Error opening source dataset: zip:S2A_MSIL2A_20200322T153621_N0214_R068_T18NUL_20200322T193833.zip!S....
 
  **Solucion:** Si no encuentra alguno de los archivos, verifique que el zip se llame igual que la imagen adentro (algo asi como *S2B_MSIL2A_20200104T152639_N0213_R025_T18NVL_20200104T192813*)
 
 
         No module named '<paquete>'
-**solucion:** correr ```conda install <paquete>```
+**Solucion:** correr ```conda install <paquete>```
 
 
 
