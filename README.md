@@ -1,22 +1,30 @@
 # Informe final monitoria de investigación 2020-1
 ## Sara María Bejarano
 En este informe me centraré en el avance hecho en el análisis de imágenes satelitales Sentinel-2 durante la segunda parte del semestre. Considero que el avance más importante es la documentación rigurosa del proceso, ya que en internet no hay muchos recursos sobre Sentinel-2 (a diferencia de LandSat).
+# Tabla de contenido
+1. [Objetivo](#s1)
+2. *Desafios*
+    1. [Instalación del cubo](#s2.1)
+    2. [Indexación de imágenes en el cubo:](#s2.2)
+    3. [Prueba de algoritmos sobre imágenes indexadas:](#s2.3)
+3. [Errores y soluciones](#s3)
+4. [Proximos pasos:](#s4)
 
-## Objetivo: 
+## Objetivo: <a name="s1"></a>
 Recrear con imágenes Sentinel-2 análisis previos hechos con imágenes LandSat 8 en Tolima. 
 
 ¿Por qué?
 
 - LandSat tiene imágenes de resolución 30mx30m (por cada 30 metros se ve un píxel) mientras que Sentinel tiene hasta 10mx10m en algunas bandas.
 - No se pueden utilizar imágenes de mejores resoluciones (cómo las de Google Earth) porque se necesitan imágenes tomadas con periodicidad fija (10 días en el caso de Sentinel 2)  para poder hacer análisis sobre cultivos.
-## Desafios: 
-## - Instalación del cubo: 
+## Desafios:  <a name="s2"></a>
+## - Instalación del cubo:  <a name="s2.1"></a>
 Para el análisis se utiliza el OPEN DATA CUBE (ODC). Es una estructura de cubo de datos que optimiza los análisis a las imágenes. Ya que estas son muy pesadas y una vez indexadas en un cubo, se pueden hacer consultas fácilmente. 
  
 Yo creé mi propia implementación del cubo ya que para desplegar la de Docker se necesita Windows pro o Linux. Seguí las instrucciones de la documentación oficial [acá](https://datacube-core.readthedocs.io/en/latest/ops/install.html) desde “Installation” hasta “Database Setup” 
 
 
-## -Indexación de imágenes en el cubo:
+## -Indexación de imágenes en el cubo: <a name="s2.2"></a>
 
 Una vez se tiene el cubo y la base de datos lista se deben hacer los siguientes pasos: 
 
@@ -47,7 +55,7 @@ Una vez se tiene el cubo y la base de datos lista se deben hacer los siguientes 
     ```datacube dataset add <path-to-dataset-document-yaml>``` 
 
 
-## Prueba de algoritmos sobre imágenes indexadas:
+ ## - Prueba de algoritmos sobre imágenes indexadas: <a name="s2.3"></a>
 Antes de hacer algoritmos sobre las imágenes recomiendo leer esta [guia para principiantes](https://github.com/GeoscienceAustralia/dea-notebooks/tree/develop/Beginners_guide) dónde explican muy bien términos como productos, plataformas, bandas espectrales, etc..
 
 **Siempre ANTES activar cubeenv, abrir el jupyter notebook en esa misma consola y prender base de datos postgreSQL**  
@@ -130,7 +138,7 @@ Sin embargo, los resultados no fueron los esperados:
 <img src="https://i.imgur.com/KX0wNc7.png" width="450" height="250" />
 
 
-### ***Algunos errores y cómo los solucioné***
+### ***Algunos errores y cómo los solucioné***  <a name="s3"></a>
     No module named 'odc'
 
 **Solucion:**  Al importar RGB sale este error y necesité importar [odc](https://github.com/opendatacube/odc-tools) con este comando:
@@ -163,7 +171,7 @@ OSError: Could not find lib geos_c.dll or load any of its variants.
 
 
 
-## Proximos pasos:
+## Proximos pasos: <a name="s4"></a>
 - Automatizar la indexación de imagenes ya que cada una se demora unas 6 horas descargando y son muy pesadas.
 - Indexar imagenes en multiples fechas de la misma zona para hacer análisis más interesantes que muestren como cambian los cultivos en el tiempo
 - Implementar con Sentinel los análisis hechos en [estos cuadernos de LandSat](https://github.com/ceos-seo/data_cube_notebooks/tree/master/DCAL). La principal dificultad es que hay algunas cosas como "fmask" que no trae el producto usado actualmente. Explorar nuevos productos como s2a_nrt_granule o aprender a calcularla.
