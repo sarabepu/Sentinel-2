@@ -166,3 +166,5 @@ OSError: Could not find lib geos_c.dll or load any of its variants.
 - Arreglar la gráfica de NDVI, ya que se debería ver algo asi:
 
 <img src="https://i.imgur.com/9nKAAg3.png" width="450" height="250" />
+
+## Puedes encontrar el código en el el jupyter notebook analysis y un proceso más detallado (y desorganizado) en documentacion.MD
