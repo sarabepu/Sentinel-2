@@ -108,32 +108,41 @@ Se recomienda que al graficar el área no tenga más de 0.1 de diferencia entre 
 Importe la funcion RGB de [aca](https://github.com/GeoscienceAustralia/dea-notebooks/blob/develop/Scripts/dea_plotting.py) y grafique asi:
 
 
+      rgb(sentinel_dataset, bands=["B04_10m", "B03_10m", "B02_10m"], index=0)
+
 
 <img src="https://i.imgur.com/r01CaZ8.png" width="450" height="250" /> 
 
 <img src="https://i.imgur.com/4LpDYZi.png" width="450" height="250" /> 
 
 <img src="https://i.imgur.com/CecON8b.png" width="450" height="250" /> 
-)
+
 
 Y se pueden mejorar la definición en algunos casos asi:
+
+    rgb(sentinel_dataset, bands=["B04_10m", "B03_10m", "B02_10m"], percentile_stretch=[0.05, 0.95])
 
 <img src="https://i.imgur.com/r01CaZ8.png" width="350" height="250" /> <img src="https://i.imgur.com/IHWQBcC.png" width="350" height="250"/>
 
 <img src="https://i.imgur.com/CecON8b.png" width="350" height="250" /> <img src="https://i.imgur.com/EnarvP8.png" width="350" height="250"/>
 
 Tambien se pueden hacer analisis más especificos conociendo las mezclas de las bandas:
+
+    rgb(sentinel_dataset, bands=["B11_20m", "B08_10m", "B03_10m"], index=0)
+
 "The false colour band combination (swir1, nir, green) emphasises growing vegetation in green, and water in deep blue:"
-<img src="https://i.imgur.com/Gxez2qX.png" width="450" height="250" />
 
-- Graficar indices de vegetación:
-
-[Este cuaderno](https://github.com/GeoscienceAustralia/dea-notebooks/blob/2d44a50b7213ef82d27c942af73fa7cd2802ac2a/Beginners_guide/06_Basic_analysis.ipynb) muestra como realizar un analisis de la salud de la vegetación. Sin embargo no utiliza s2a_sen2cor_granule como producto. Para saber la correspondencia de las bandas hay que tener el cuenta las longitudes de onda de esta tabla:
+Para saber la correspondencia de las bandas hay que tener el cuenta las longitudes de onda de esta tabla:
 <img src="https://www.researchgate.net/publication/327654383/figure/tbl1/AS:670813892132864@1536945903015/Spectral-bands-range-and-spatial-resolution-of-Sentinel-2A-MSI-and-Landsat-8-OLI.png" width="450" height="250" />
 
 
 
-Sin embargo, los resultados no fueron los esperados:
+
+<img src="https://i.imgur.com/Gxez2qX.png" width="450" height="250" />
+
+- Graficar indices de vegetación:
+
+[Este cuaderno](https://github.com/GeoscienceAustralia/dea-notebooks/blob/2d44a50b7213ef82d27c942af73fa7cd2802ac2a/Beginners_guide/06_Basic_analysis.ipynb) muestra como realizar un analisis de la salud de la vegetación. Sin embargo no utiliza s2a_sen2cor_granule como producto. Después de hacer la similitud de la longitud de las bandas seguí el mismo proceso. Sin embargo,los resultados no fueron los esperados:
 
 <img src="https://i.imgur.com/KX0wNc7.png" width="450" height="250" />
 
